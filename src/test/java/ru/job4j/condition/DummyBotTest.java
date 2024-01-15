@@ -14,7 +14,7 @@ public class DummyBotTest {
 
     @Test
     void whenByeBot() {
-        String input = "Buy.";
+        String input = "Bye.";
         String result = DummyBot.answer(input);
         String expected = "See you later.";
         assertThat(result).isEqualTo(expected);
