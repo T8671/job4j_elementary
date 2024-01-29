@@ -10,14 +10,16 @@ class FindLoopTest {
         int[] data = new int[] {5, 10, 3};
         int element = 5;
         int result = FindLoop.indexOf(data, element);
-        assertThat(result).isEqualTo(element);
+        int expected = 0;
+        assertThat(result).isEqualTo(expected);
     }
 
     @Test
     void whenArrayHasNot10ThenMinus1() {
         int[] data = new int[] {5, 6, 7};
-        int element = -1;
+        int element = 15;
         int result = FindLoop.indexOf(data, element);
-        assertThat(result).isEqualTo(element);
+        int expected = -1;
+        assertThat(result).isEqualTo(expected);
     }
 }
