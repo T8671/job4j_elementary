@@ -49,7 +49,7 @@ class FindLoopTest {
 
     @Test
     public void whenDiapasonHasNot8ThenMinus1() {
-        int[] data = new int[]{5, 10, 2, 4, 8, 4, 14, 4, 3, 21, 16};
+        int[] data = new int[]{5, 10, 2, 4, 8, 4, 14, 4, 3, 21, 18};
         int element = 7;
         int start = 5;
         int finish = 10;
