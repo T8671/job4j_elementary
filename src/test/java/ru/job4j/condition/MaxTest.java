@@ -39,4 +39,88 @@ public class MaxTest {
         int expected = 5;
         assertThat(result).isEqualTo(expected);
     }
+
+    @Test
+    void whenA1B2C3Then3() {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int result = Max.max(a, b, c);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA3B2C1Then3() {
+        int a = 3;
+        int b = 2;
+        int c = 1;
+        int result = Max.max(a, b, c);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA1B3C2Then3() {
+        int a = 1;
+        int b = 3;
+        int c = 2;
+        int result = Max.max(a, b, c);
+        int expected = 3;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA1B1C1Then1() {
+        int a = 1;
+        int b = 1;
+        int c = 1;
+        int result = Max.max(a, b, c);
+        int expected = 1;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA1B1C1D1Then4() {
+        int a = 1;
+        int b = 2;
+        int c = 3;
+        int d = 4;
+        int result = Max.max(a, b, c, d);
+        int expected = 4;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA4B3C2D1Then4() {
+        int a = 4;
+        int b = 3;
+        int c = 2;
+        int d = 1;
+        int result = Max.max(a, b, c, d);
+        int expected = 4;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA1B4C2D3Then4() {
+        int a = 1;
+        int b = 4;
+        int c = 2;
+        int d = 3;
+        int result = Max.max(a, b, c, d);
+        int expected = 4;
+        assertThat(result).isEqualTo(expected);
+    }
+
+    @Test
+    void whenA1B2C4D3Then4() {
+        int a = 1;
+        int b = 2;
+        int c = 4;
+        int d = 3;
+        int result = Max.max(a, b, c, d);
+        int expected = 4;
+        assertThat(result).isEqualTo(expected);
+    }
 }
