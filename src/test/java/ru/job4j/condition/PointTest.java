@@ -50,4 +50,53 @@ class PointTest {
         double expected = 9.89;
         assertThat(a.distance(b)).isEqualTo(expected, withPrecision(0.01));
     }
+
+    @Test
+    void whenMinus1Minus2Minus3andMinus8Minus9Minus10Then12dot12() {
+        Point a = new Point(-1, -2, -3);
+        Point b = new Point(-8, -9, -10);
+        a.distance3d(b);
+        double expected = 12.12;
+        assertThat(a.distance3d(b)).isEqualTo(expected, withPrecision(0.01));
+
+    }
+
+    @Test
+    void when123and8910Then12dot12() {
+        Point a = new Point(1, 2, 3);
+        Point b = new Point(8, 9, 10);
+        a.distance3d(b);
+        double expected = 12.12;
+        assertThat(a.distance3d(b)).isEqualTo(expected, withPrecision(0.01));
+
+    }
+
+    @Test
+    void when12Minus3andMinus8910Then17dot29() {
+        Point a = new Point(1, 2, -3);
+        Point b = new Point(-8, 9, 10);
+        a.distance3d(b);
+        double expected = 17.29;
+        assertThat(a.distance3d(b)).isEqualTo(expected, withPrecision(0.01));
+
+    }
+
+    @Test
+    void when123andMinus8910Then13dot37() {
+        Point a = new Point(1, 2, 3);
+        Point b = new Point(-8, 9, 10);
+        a.distance3d(b);
+        double expected = 13.37;
+        assertThat(a.distance3d(b)).isEqualTo(expected, withPrecision(0.01));
+
+    }
+
+    @Test
+    void when003and000Then3() {
+        Point a = new Point(0, 0, 3);
+        Point b = new Point(0, 0, 0);
+        a.distance3d(b);
+        double expected = 3;
+        assertThat(a.distance3d(b)).isEqualTo(expected, withPrecision(0.01));
+    }
 }
